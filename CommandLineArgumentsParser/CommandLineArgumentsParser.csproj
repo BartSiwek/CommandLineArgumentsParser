@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79301544-C3F2-436B-A376-BBC9DB70B59B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommandLineArgumentsParser</RootNamespace>
+    <AssemblyName>CommandLineArgumentsParser</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandLineArgumentsException.cs" />
+    <Compile Include="CommandLineOptionAttribute.cs" />
+    <Compile Include="CommandLineParser.cs" />
+    <Compile Include="ICommandLineParsable.cs" />
+    <Compile Include="Pair.cs" />
+    <Compile Include="Parsers\BooleanParser.cs" />
+    <Compile Include="Parsers\ByteParser.cs" />
+    <Compile Include="Parsers\CharParser.cs" />
+    <Compile Include="Parsers\DecimalParser.cs" />
+    <Compile Include="Parsers\DoubleParser.cs" />
+    <Compile Include="Parsers\Int16Parser.cs" />
+    <Compile Include="Parsers\Int32Parser.cs" />
+    <Compile Include="Parsers\Int64Parser.cs" />
+    <Compile Include="Parsers\SByteParser.cs" />
+    <Compile Include="Parsers\SingleParser.cs" />
+    <Compile Include="Parsers\StringParser.cs" />
+    <Compile Include="Parsers\UInt16Parser.cs" />
+    <Compile Include="Parsers\UInt32Parser.cs" />
+    <Compile Include="Parsers\UInt64Parser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
